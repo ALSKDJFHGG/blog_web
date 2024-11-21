@@ -46,7 +46,7 @@ public class CommentHandler {
         return Response.status(Response.Status.OK).entity(res).build();
     }
 
-    @POST
+    @DELETE
     @Path("/{id}")
     @Secured({"user", "admin"})
     @Consumes(MediaType.APPLICATION_JSON)
