@@ -63,8 +63,8 @@ public class UserHandler {
         Map<String, Object> res = new HashMap<>();
         res.put("code", Response.Status.OK);
         res.put("token", token);
-        user.setPassword(null);
         res.put("data", user);
+        res.remove("password");
         return Response.status(Response.Status.OK).entity(res).build();
     }
 

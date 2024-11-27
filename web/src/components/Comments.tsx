@@ -95,15 +95,15 @@ export default function Comments({ id }: { id: number }) {
                     <Button variant="contained" onClick={submitComment}>评论</Button>
                 </Box>
                 <Grid2>
-                    {comments?.map((oneOfComments, index) => {
+                    {comments?.map((oneComments, index) => {
                         return (
                             <MyComment
                                 key={index}
-                                comment={oneOfComments.content}
-                                firstName={oneOfComments.user?.username}
-                                created_at={oneOfComments.created_at}
+                                comment={oneComments.content}
+                                firstName={oneComments.user?.username}
+                                created_at={oneComments.created_at}
                                 deleteComment={deleteComment}
-                                id={oneOfComments.id}
+                                id={oneComments.id}
                             />
                         );
                             // <Button variant="contained" onClick={deleteComment(MyComment, id)}>删除</Button>
